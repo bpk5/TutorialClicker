@@ -1,6 +1,7 @@
 package com.gmail.bartekbpk.com.gmail.bartekbpk.screens;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.Timer;
 import com.gmail.bartekbpk.TutorialClickerGame;
 
 /**
@@ -10,9 +11,16 @@ public class SplachScreen extends AbstractScreen {
 
     private Texture splashImg;
 
-    public SplachScreen(TutorialClickerGame game) {
+    public SplachScreen(final TutorialClickerGame game) {
         super(game);
         initial();
+
+        Timer.schedule(new Timer.Task() {
+            @Override
+            public void run() {
+                game.setScreen(new GamePlayScreen(game));
+            }
+        }, 1);
     }
 
     private void initial() {
