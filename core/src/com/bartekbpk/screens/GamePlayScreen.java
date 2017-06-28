@@ -1,9 +1,9 @@
-package com.gmail.bartek.bpk.screens;
+package com.bartekbpk.screens;
 
-import com.gmail.bartekbpk.TutorialClickerGame;
-import com.gmail.bartekbppk.entities.Player;
+import com.bartekbpk.game.TutorialClickerGame;
+import com.bartekbpk.entities.Player;
 
-public class GamePlayScreen extends AbstractScreen {
+public class GamePlayScreen extends com.bartekbpk.screens.AbstractScreen {
 
     private Player player;
 

@@ -1,4 +1,4 @@
-package com.gmail.bartekbppk.entities;
+package com.bartekbpk.entities;
 
 
 import com.badlogic.gdx.graphics.Texture;

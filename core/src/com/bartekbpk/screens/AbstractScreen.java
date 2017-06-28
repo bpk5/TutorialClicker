@@ -1,4 +1,4 @@
-package com.gmail.bartek.bpk.screens;
+package com.bartekbpk.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.gmail.bartekbpk.TutorialClickerGame;
+import com.bartekbpk.game.TutorialClickerGame;
 
 /**
  * Po tej klasie dziedziczą wszystkie screeny.
