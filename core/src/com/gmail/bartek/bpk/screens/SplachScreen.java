@@ -7,7 +7,7 @@ import com.gmail.bartekbpk.TutorialClickerGame;
 /**
  * Ekran powitalny.
  */
-public class SplachScreen extends com.gmail.bartek.bpk.screens.AbstractScreen {
+public class SplachScreen extends AbstractScreen {
 
     private Texture splashImg;
 
@@ -19,7 +19,7 @@ public class SplachScreen extends com.gmail.bartek.bpk.screens.AbstractScreen {
         Timer.schedule(new Timer.Task() {
             @Override
             public void run() {
-                game.setScreen(new com.gmail.bartek.bpk.screens.GamePlayScreen(game));
+                game.setScreen(new GamePlayScreen(game));
             }
         }, 1);
     }
