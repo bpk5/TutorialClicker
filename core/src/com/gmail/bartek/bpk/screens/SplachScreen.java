@@ -1,4 +1,4 @@
-package com.gmail.bartekbpk.com.gmail.bartekbpk.screens;
+package com.gmail.bartek.bpk.screens;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.utils.Timer;
@@ -7,7 +7,7 @@ import com.gmail.bartekbpk.TutorialClickerGame;
 /**
  * Ekran powitalny.
  */
-public class SplachScreen extends AbstractScreen {
+public class SplachScreen extends com.gmail.bartek.bpk.screens.AbstractScreen {
 
     private Texture splashImg;
 
@@ -15,10 +15,11 @@ public class SplachScreen extends AbstractScreen {
         super(game);
         initial();
 
+        // Timer - uruchamia metodę run po 1 s.
         Timer.schedule(new Timer.Task() {
             @Override
             public void run() {
-                game.setScreen(new GamePlayScreen(game));
+                game.setScreen(new com.gmail.bartek.bpk.screens.GamePlayScreen(game));
             }
         }, 1);
     }

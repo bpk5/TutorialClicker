@@ -1,7 +1,7 @@
 package com.gmail.bartekbpk;
 
 import com.badlogic.gdx.Game;
-import com.gmail.bartekbpk.com.gmail.bartekbpk.screens.SplachScreen;
+import com.gmail.bartek.bpk.screens.SplachScreen;
 
 public class TutorialClickerGame extends Game {
 

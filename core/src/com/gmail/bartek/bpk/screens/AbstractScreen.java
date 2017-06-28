@@ -1,4 +1,4 @@
-package com.gmail.bartekbpk.com.gmail.bartekbpk.screens;
+package com.gmail.bartek.bpk.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
