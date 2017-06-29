@@ -9,10 +9,10 @@ public class GamePlayScreen extends com.bartekbpk.screens.AbstractScreen {
 
     public GamePlayScreen(TutorialClickerGame game) {
         super(game);
-        initial();
     }
 
-    private void initial() {
+    @Override
+    protected void initial() {
         initPlayer();
     }
 

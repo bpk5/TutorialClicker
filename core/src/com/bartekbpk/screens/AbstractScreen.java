@@ -30,7 +30,10 @@ public abstract class AbstractScreen implements Screen {
         spriteBatch = new SpriteBatch();
         // Input będzie pobierany z stage (sceny dla aktorów).
         Gdx.input.setInputProcessor(stage);
+        initial();
     }
+
+    protected abstract void initial();
 
     private void createCamera() {
         camera = new OrthographicCamera();

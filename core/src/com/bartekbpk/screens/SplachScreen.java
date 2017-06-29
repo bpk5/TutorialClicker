@@ -13,7 +13,6 @@ public class SplachScreen extends com.bartekbpk.screens.AbstractScreen {
 
     public SplachScreen(final TutorialClickerGame game) {
         super(game);
-        initial();
 
         // Timer - uruchamia metodę run po 1 s.
         Timer.schedule(new Timer.Task() {
@@ -24,7 +23,8 @@ public class SplachScreen extends com.bartekbpk.screens.AbstractScreen {
         }, 1);
     }
 
-    private void initial() {
+    @Override
+    protected void initial() {
         // TODO: 27.06.17 implement better assets loading when game graws
         splashImg = new Texture("badlogic.jpg");
     }
