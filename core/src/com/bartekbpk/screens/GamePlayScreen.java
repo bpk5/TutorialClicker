@@ -27,7 +27,7 @@ public class GamePlayScreen extends com.bartekbpk.screens.AbstractScreen {
         playerButton.setHeight(360);
         playerButton.setX(10);
         playerButton.setY(170);
-        playerButton.setDebug(true); // Jeżeli button jest niewidoczny to pojawia się ramka.
+        playerButton.setDebug(true); // If button is transparent, appears frames.
 
         stage.addActor(playerButton);
 
@@ -35,7 +35,8 @@ public class GamePlayScreen extends com.bartekbpk.screens.AbstractScreen {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
 
-                System.out.println("click");
+                //System.out.println("click");
+                player.reactOnClick();
                 return super.touchDown(event, x, y, pointer, button);
             }
         });

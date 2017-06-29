@@ -17,7 +17,7 @@ public abstract class AbstractScreen implements Screen {
 
     protected TutorialClickerGame game;
 
-    protected Stage stage; // Scena dla aktorów.
+    protected Stage stage; // Scenes for actors.
     private OrthographicCamera camera;
 
     protected SpriteBatch spriteBatch;
@@ -25,10 +25,11 @@ public abstract class AbstractScreen implements Screen {
     public AbstractScreen(TutorialClickerGame game) {
         this.game = game;
         createCamera();
-        // Viewport - sprawdz w internecie, dopasowanie do ekranu, są rózne metody.
+        // Viewport - check the web, fit to screen, there are different methods.
         stage = new Stage(new StretchViewport(TutorialClickerGame.WIDTH, TutorialClickerGame.HEIGHT));
         spriteBatch = new SpriteBatch();
-        // Input będzie pobierany z stage (sceny dla aktorów).
+
+        // Input will be downloaded from stage (
         Gdx.input.setInputProcessor(stage);
         initial();
     }
@@ -58,17 +59,17 @@ public abstract class AbstractScreen implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
     }
 
-    // Aplikacja była w tle i wróciła.
+    // The application was in the background and come back.
     @Override
     public void resume() {
-        // Flagę pause ustawiam na false.
+        // Flag pause set false.
         game.setPaused(false);
     }
 
-    // Aplikacja byłą zatrzymana.
+    // The application is stopped.
     @Override
     public void pause() {
-        // Flagę pause ustawiam na true.
+        // Flag pause set true.
         game.setPaused(true);
     }
 
