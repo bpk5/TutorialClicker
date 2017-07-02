@@ -24,6 +24,8 @@ public abstract class AbstractScreen implements Screen {
 
     public AbstractScreen(TutorialClickerGame game) {
         this.game = game;
+        this.game.licznik++;
+        System.out.println(this.game.licznik);
         createCamera();
         // Viewport - check the web, fit to screen, there are different methods.
         stage = new Stage(new StretchViewport(TutorialClickerGame.WIDTH, TutorialClickerGame.HEIGHT));
@@ -81,6 +83,7 @@ public abstract class AbstractScreen implements Screen {
 
     @Override
     public void dispose() {
+        System.out.println("end");
         game.dispose();
     }
 }

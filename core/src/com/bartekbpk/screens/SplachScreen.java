@@ -7,7 +7,7 @@ import com.bartekbpk.game.TutorialClickerGame;
 /**
  * Ekran powitalny.
  */
-public class SplachScreen extends com.bartekbpk.screens.AbstractScreen {
+public class SplachScreen extends AbstractScreen {
 
     private Texture splashImg;
 
@@ -18,7 +18,7 @@ public class SplachScreen extends com.bartekbpk.screens.AbstractScreen {
         Timer.schedule(new Timer.Task() {
             @Override
             public void run() {
-                game.setScreen(new com.bartekbpk.screens.GamePlayScreen(game));
+                game.setScreen(new GamePlayScreen(game));
             }
         }, 1);
     }

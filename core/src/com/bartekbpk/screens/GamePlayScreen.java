@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.bartekbpk.game.TutorialClickerGame;
 import com.bartekbpk.entities.Player;
 
-public class GamePlayScreen extends com.bartekbpk.screens.AbstractScreen {
+public class GamePlayScreen extends AbstractScreen {
 
     private Player player;
     private Button playerButton;
