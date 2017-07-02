@@ -7,8 +7,6 @@ import com.bartekbpk.screens.SplachScreen;
 // TODO: 29.06.17 tutorial 4. 15 minut
 public class TutorialClickerGame extends Game {
 
-    public static int licznik = 0;
-
     public final static String GAME_NAME = "Tutorial Clicker";
 
 	public final static int WIDTH = 480;
