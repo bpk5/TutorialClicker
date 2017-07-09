@@ -9,19 +9,18 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
  * Created by Bartlomiej Kulesa on 09.07.17.
  */
 
-public class PlayerButton extends Button {
-    public PlayerButton(final IClickCallback callback) {
+public class ResetScoreButton extends Button {
+    public ResetScoreButton(final IClickCallback callback) {
         super(new ButtonStyle());
-
         initial(callback);
     }
 
     private void initial(final IClickCallback callback) {
-        this.setWidth(460);
-        this.setHeight(360);
-        this.setX(10);
-        this.setY(170);
-        this.setDebug(true); // If button is transparent, appears frames.
+        this.setWidth(100);
+        this.setHeight(100);
+        this.setX(330);
+        this.setY(560);
+        this.setDebug(true);
 
         this.addListener(new ClickListener() {
             @Override
