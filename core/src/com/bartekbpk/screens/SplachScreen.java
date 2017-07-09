@@ -20,13 +20,13 @@ public class SplachScreen extends AbstractScreen {
             public void run() {
                 game.setScreen(new GamePlayScreen(game));
             }
-        }, 1);
+        }, 3);
     }
 
     @Override
     protected void initial() {
         // TODO: 27.06.17 implement better assets loading when game graws
-        splashImg = new Texture("badlogic.jpg");
+        splashImg = new Texture("screen.jpg");
     }
 
     @Override
@@ -34,7 +34,7 @@ public class SplachScreen extends AbstractScreen {
         super.render(delta);
 
         spriteBatch.begin();
-        spriteBatch.draw(splashImg, 0, 0);
+        spriteBatch.draw(splashImg, 0, -100);
         spriteBatch.end();
     }
 }
