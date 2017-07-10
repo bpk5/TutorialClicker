@@ -1,8 +1,7 @@
 package com.bartekbpk.screens;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.bartekbpk.game.TutorialClickerGame;
 import com.bartekbpk.entities.Player;
 import com.bartekbpk.ui.IClickCallback;
@@ -12,7 +11,7 @@ import com.bartekbpk.ui.ScoreLabel;
 
 public class GamePlayScreen extends AbstractScreen {
 
-    private Texture bgTexture;
+    private Image bgImg;
     private Player player;
     private PlayerButton playerButton;
     private ResetScoreButton resetScoreButton;
@@ -24,11 +23,16 @@ public class GamePlayScreen extends AbstractScreen {
 
     @Override
     protected void initial() {
-        bgTexture = new Texture("background.jpg");
+        initBg();
         initPlayer();
         initPlayerButton();
         initResetScoreButton();
         initScoreLabel();
+    }
+
+    private void initBg() {
+        bgImg = new Image(new Texture("background.jpg"));
+        stage.addActor(bgImg);
     }
 
     private void initResetScoreButton() {
@@ -69,10 +73,6 @@ public class GamePlayScreen extends AbstractScreen {
     public void render(float delta) {
         super.render(delta);
         update();
-
-        spriteBatch.begin();
-        spriteBatch.draw(bgTexture, 0, -100);
-        spriteBatch.end();
 
         spriteBatch.begin();
         stage.draw();
