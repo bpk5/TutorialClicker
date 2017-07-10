@@ -21,7 +21,7 @@ public class PlayerButton extends Button {
         this.setHeight(360);
         this.setX(10);
         this.setY(170);
-        this.setDebug(true); // If button is transparent, appears frames.
+        //this.setDebug(true); // If button is transparent, appears frames.
 
         this.addListener(new ClickListener() {
             @Override

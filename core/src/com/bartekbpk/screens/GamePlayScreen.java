@@ -8,6 +8,7 @@ import com.bartekbpk.entities.Player;
 import com.bartekbpk.ui.IClickCallback;
 import com.bartekbpk.ui.PlayerButton;
 import com.bartekbpk.ui.ResetScoreButton;
+import com.bartekbpk.ui.ScoreLabel;
 
 public class GamePlayScreen extends AbstractScreen {
 
@@ -15,7 +16,7 @@ public class GamePlayScreen extends AbstractScreen {
     private Player player;
     private PlayerButton playerButton;
     private ResetScoreButton resetScoreButton;
-    private Label scoreLabel;
+    private ScoreLabel scoreLabel;
 
     public GamePlayScreen(TutorialClickerGame game) {
         super(game);
@@ -42,11 +43,7 @@ public class GamePlayScreen extends AbstractScreen {
     }
 
     private void initScoreLabel() {
-        Label.LabelStyle style = new Label.LabelStyle();
-        style.font = new BitmapFont();
-        scoreLabel = new Label("", style);
-        scoreLabel.setX(20);
-        scoreLabel.setY(650);
+        scoreLabel = new ScoreLabel();
         stage.addActor(scoreLabel);
 
     }
