@@ -2,6 +2,7 @@ package com.bartekbpk.screens;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.bartekbpk.entities.FlyingObject;
 import com.bartekbpk.game.TutorialClickerGame;
 import com.bartekbpk.entities.Player;
 import com.bartekbpk.ui.IClickCallback;
@@ -16,6 +17,7 @@ public class GamePlayScreen extends AbstractScreen {
     private PlayerButton playerButton;
     private ResetScoreButton resetScoreButton;
     private ScoreLabel scoreLabel;
+    private FlyingObject flyingObject1;
 
     public GamePlayScreen(TutorialClickerGame game) {
         super(game);
@@ -28,6 +30,14 @@ public class GamePlayScreen extends AbstractScreen {
         initPlayerButton();
         initResetScoreButton();
         initScoreLabel();
+        initFlyObjects();
+    }
+
+    private void initFlyObjects() {
+        flyingObject1 = new FlyingObject(FlyingObject.MONEY);
+        flyingObject1.fly();
+
+        stage.addActor(flyingObject1);
     }
 
     private void initBg() {
